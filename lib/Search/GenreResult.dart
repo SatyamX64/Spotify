@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:spotify/Reusable_Cards/AlbumCard.dart';
+import 'package:spotify/Widgets/AlbumCard.dart';
 
 class GenreResult extends StatelessWidget {
   final String title;

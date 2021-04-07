@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:spotify/Premium/PremiumCard.dart';
 import 'package:spotify/Premium/SlidingCard.dart';
-import 'package:spotify/constants.dart';
 
 class Premium extends StatelessWidget {
   @override
@@ -11,7 +10,7 @@ class Premium extends StatelessWidget {
       decoration: BoxDecoration(
           gradient: LinearGradient(
         colors: [
-          spotifyGreen,
+          Color(0xFF1DB954),
           Colors.black,
         ],
         begin: Alignment.topCenter,

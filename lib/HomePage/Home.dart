@@ -1,10 +1,8 @@
 import 'dart:math';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:spotify/HomePage/AlbumTile.dart';
-import 'package:spotify/constants.dart';
-import '../Reusable_Cards/AlbumCard.dart';
+import '../Widgets/AlbumCard.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -12,7 +10,14 @@ class Home extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 7),
       decoration: BoxDecoration(
-        gradient: kGradientColor,
+        gradient: LinearGradient(
+          colors: [
+            Color(0xFF322E48),
+            Color(0xFF121212),
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
       ),
       child: CustomScrollView(
         slivers: <Widget>[
@@ -29,11 +34,11 @@ class Home extends StatelessWidget {
                 ),
                 Container(
                   alignment: Alignment.centerLeft,
-                  padding: EdgeInsets.all(3),
+                  padding: EdgeInsets.all(4),
                   child: Text(
                     'Good Evening',
                     style: TextStyle(
-                      fontSize: 23,
+                      fontSize: 24,
                       color: Colors.white,
                       fontWeight: FontWeight.w900,
                     ),
@@ -96,8 +101,10 @@ class Home extends StatelessWidget {
               ],
             ),
           ),
+          SliverToBoxAdapter(
+            child : SizedBox(height: 14,),
+          ),
           SliverList(
-
             delegate: SliverChildBuilderDelegate(
                 (BuildContext context,int index){
                   return Column(

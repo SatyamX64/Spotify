@@ -7,9 +7,9 @@ import 'dart:math';
 
 class SliverCustomHeader extends SliverPersistentHeaderDelegate {
   SliverCustomHeader({
-    @required this.minHeight,
-    @required this.maxHeight,
-    @required this.child,
+     this.minHeight,
+     this.maxHeight,
+     this.child,
   });
 
   final double minHeight;
